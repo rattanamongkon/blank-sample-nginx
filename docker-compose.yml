@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - '80:80'
+    expose:
+      - 80
+    volumes:
+      # - ./html_doc:/var/www/html_doc
+      # - ./includes:/etc/nginx/includes
+      - ./site:/etc/nginx/conf.d/
+    networks:
+      - suzuki-trace-network
+
+networks:
+  suzuki-trace-network:
+    name: suzuki-trace-network

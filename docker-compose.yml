@@ -5,8 +5,8 @@ services:
     container_name: nginx
     ports:
       - '80:80'
-    expose:
-      - 80
+    # expose:
+    #   - 80
     volumes:
       # - ./html_doc:/var/www/html_doc
       # - ./includes:/etc/nginx/includes
